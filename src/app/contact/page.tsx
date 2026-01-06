@@ -3,7 +3,10 @@ export default function ContactPage() {
         <>
             <section className="relative pt-[80px] min-h-[300px] bg-slate-900 flex items-center text-white">
                 <div className="absolute top-0 left-0 w-full h-full bg-slate-900/90 z-10"></div>
-                {/* Simple background */}
+                <div
+                    className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-0 opacity-80"
+                    style={{ backgroundImage: "url('/assets/hero_contact_v2.png')" }}
+                ></div>
                 <div className="container-custom relative z-20 text-center">
                     <h1 className="text-5xl md:text-6xl font-extrabold mb-4 text-white">Contact Us</h1>
                     <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">Get in touch with our team for demos, support, or inquiries.</p>

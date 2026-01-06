@@ -7,8 +7,8 @@ export default function AboutPage() {
             <section className="relative pt-[80px] min-h-[400px] bg-slate-900 flex items-center text-white">
                 <div className="absolute top-0 left-0 w-full h-full bg-slate-900/90 z-10"></div>
                 <div
-                    className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-0 opacity-20"
-                    style={{ backgroundImage: "url('/assets/hero_business_meeting_1767539244571.png')" }}
+                    className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-0 opacity-60"
+                    style={{ backgroundImage: "url('/assets/hero_about.jpg')" }}
                 ></div>
 
                 <div className="container-custom relative z-20 text-center">
@@ -36,7 +36,7 @@ export default function AboutPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                         <div className="order-2 md:order-1">
-                            <img src="/assets/hero_business_laptop_1767539174554.png" alt="Mission" className="rounded-xl shadow-lg" />
+                            <img src="/assets/why_choose_abi.png" alt="Why Choose ABI Systems" className="rounded-xl shadow-lg" />
                         </div>
                         <div className="order-1 md:order-2">
                             <h2>Why Choose ABI Systems?</h2>

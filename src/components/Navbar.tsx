@@ -18,6 +18,7 @@ const Navbar = () => {
                     <Link href="/" className="text-slate-600 hover:text-blue-600 font-medium text-sm">Home</Link>
                     <Link href="/products" className="text-slate-600 hover:text-blue-600 font-medium text-sm">Products</Link>
                     <Link href="/services" className="text-slate-600 hover:text-blue-600 font-medium text-sm">Services</Link>
+                    <Link href="/careers" className="text-slate-600 hover:text-blue-600 font-medium text-sm">Careers</Link>
                     <Link href="/about" className="text-slate-600 hover:text-blue-600 font-medium text-sm">About</Link>
                     <Link href="/contact" className="text-slate-600 hover:text-blue-600 font-medium text-sm">Contact</Link>
                 </nav>
@@ -41,6 +42,7 @@ const Navbar = () => {
                     <Link href="/" onClick={() => setIsMenuOpen(false)} className="text-slate-700 font-medium">Home</Link>
                     <Link href="/products" onClick={() => setIsMenuOpen(false)} className="text-slate-700 font-medium">Products</Link>
                     <Link href="/services" onClick={() => setIsMenuOpen(false)} className="text-slate-700 font-medium">Services</Link>
+                    <Link href="/careers" onClick={() => setIsMenuOpen(false)} className="text-slate-700 font-medium">Careers</Link>
                     <Link href="/about" onClick={() => setIsMenuOpen(false)} className="text-slate-700 font-medium">About</Link>
                     <Link href="/contact" onClick={() => setIsMenuOpen(false)} className="text-slate-700 font-medium">Contact</Link>
                 </div>

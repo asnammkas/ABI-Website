@@ -88,14 +88,57 @@ export default function BstBarcodePage() {
                         <p className="text-slate-500">From scan to print in seconds.</p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="aspect-[9/16] bg-slate-200 rounded-lg flex items-center justify-center text-slate-400">
-                            <span>App Screenshot 1</span>
+                        <div className="rounded-xl overflow-hidden shadow-lg border border-slate-200 relative aspect-[3/4] bg-slate-100">
+                            <img src="/assets/barcode_mockup_1.png" alt="Select Item" className="absolute inset-0 w-full h-full object-cover" />
                         </div>
-                        <div className="aspect-[9/16] bg-slate-200 rounded-lg flex items-center justify-center text-slate-400">
-                            <span>App Screenshot 2</span>
+                        <div className="rounded-xl overflow-hidden shadow-lg border border-slate-200 relative aspect-[3/4] bg-slate-100">
+                            <img src="/assets/barcode_mockup_2.png" alt="Enter Data" className="absolute inset-0 w-full h-full object-cover" />
                         </div>
-                        <div className="aspect-[9/16] bg-slate-200 rounded-lg flex items-center justify-center text-slate-400">
-                            <span>App Screenshot 3</span>
+                        <div className="rounded-xl overflow-hidden shadow-lg border border-slate-200 relative aspect-[3/4] bg-slate-100">
+                            <img src="/assets/barcode_mockup_3.png" alt="Print Labels" className="absolute inset-0 w-full h-full object-cover" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Pricing Plans */}
+            <section className="section bg-white">
+                <div className="container-custom">
+                    <div className="text-center mb-12">
+                        <h2>Simple Pricing for Professional Labeling</h2>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
+                        {/* Free Plan */}
+                        <div className="bg-slate-50 p-8 rounded-2xl border border-slate-200 flex flex-col h-full">
+                            <h3 className="text-2xl font-bold mb-2">Free Plan</h3>
+                            <p className="text-slate-500 text-sm mb-6">Perfect for new users</p>
+                            <div className="mb-6 pb-6 border-b border-slate-200">
+                                <span className="text-2xl font-bold text-slate-900">Free</span>
+                            </div>
+                            <ul className="space-y-4 mb-8 text-slate-600">
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-green-500 mt-1"></i> All yearly plan features included</li>
+                                <li className="flex gap-3"><i className="fa-solid fa-circle-exclamation text-orange-500 mt-1"></i> Limited to 50 label prints per day</li>
+                            </ul>
+                            <Link href="#" className="btn btn-outline w-full justify-center mt-auto">Download Free</Link>
+                        </div>
+
+                        {/* Yearly Plan */}
+                        <div className="bg-slate-900 text-white p-8 rounded-2xl shadow-xl border border-slate-900 relative flex flex-col h-full">
+                            <div className="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">BEST VALUE</div>
+                            <h3 className="text-2xl font-bold mb-2 text-white">Yearly Plan</h3>
+                            <p className="text-slate-300 text-sm mb-6">Complete Business Suite</p>
+                            <div className="mb-6 pb-6 border-b border-slate-700">
+                                <span className="text-2xl font-bold text-white">Contact for Price</span>
+                            </div>
+                            <ul className="space-y-4 mb-8 text-slate-300">
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-blue-400 mt-1"></i> Unlimited Prints</li>
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-blue-400 mt-1"></i> Item management (Create, Edit, Select)</li>
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-blue-400 mt-1"></i> Unique Barcode Generation</li>
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-blue-400 mt-1"></i> Fast item search & selection</li>
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-blue-400 mt-1"></i> Portable Bluetooth printing</li>
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-blue-400 mt-1"></i> Invalid key alerts & Tones</li>
+                            </ul>
+                            <Link href="/contact" className="btn btn-primary w-full justify-center mt-auto">Get Yearly Plan</Link>
                         </div>
                     </div>
                 </div>

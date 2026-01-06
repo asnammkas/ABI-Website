@@ -97,14 +97,86 @@ export default function BillCalcPage() {
                         <p className="text-slate-500">Visualizing simplicity and power.</p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="aspect-[9/16] bg-slate-200 rounded-lg flex items-center justify-center text-slate-400">
-                            <span>App Screenshot 1</span>
+                        <div className="rounded-xl overflow-hidden shadow-lg border border-slate-200 relative aspect-[3/4] bg-slate-100">
+                            <img src="/assets/billcalc_mockup_1.png" alt="Select Item" className="absolute inset-0 w-full h-full object-cover" />
                         </div>
-                        <div className="aspect-[9/16] bg-slate-200 rounded-lg flex items-center justify-center text-slate-400">
-                            <span>App Screenshot 2</span>
+                        <div className="rounded-xl overflow-hidden shadow-lg border border-slate-200 relative aspect-[3/4] bg-slate-100">
+                            <img src="/assets/billcalc_mockup_2.png" alt="Enter Quantity" className="absolute inset-0 w-full h-full object-cover" />
                         </div>
-                        <div className="aspect-[9/16] bg-slate-200 rounded-lg flex items-center justify-center text-slate-400">
-                            <span>App Screenshot 3</span>
+                        <div className="rounded-xl overflow-hidden shadow-lg border border-slate-200 relative aspect-[3/4] bg-slate-100">
+                            <img src="/assets/billcalc_mockup_3.png" alt="Print Receipt" className="absolute inset-0 w-full h-full object-cover" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Pricing Plans */}
+            <section className="section bg-slate-50">
+                <div className="container-custom">
+                    <div className="text-center mb-12">
+                        <h2>Simple, Transparent Pricing</h2>
+                        <p className="text-slate-500">Choose the plan that fits your business needs.</p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                        {/* Lite Plan */}
+                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:border-blue-500 transition-colors flex flex-col h-full">
+                            <h3 className="text-2xl font-bold mb-2">Lite Plan</h3>
+                            <p className="text-slate-500 text-sm mb-6">Lightning-Fast Billing</p>
+                            <ul className="space-y-3 mb-8 text-sm text-slate-600">
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-green-500 mt-1"></i> Advanced calculator with complex calculations</li>
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-green-500 mt-1"></i> Item discount by value & percentage</li>
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-green-500 mt-1"></i> Total discount by value & percentage</li>
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-green-500 mt-1"></i> Smart syntax discounts (e.g. 200%10)</li>
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-green-500 mt-1"></i> On-the-fly bulk to unit price calc</li>
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-green-500 mt-1"></i> Simple change calculation</li>
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-green-500 mt-1"></i> Portable Bluetooth printing</li>
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-green-500 mt-1"></i> Bill sharing via WhatsApp & SMS</li>
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-green-500 mt-1"></i> Daily/Monthly/Yearly sales summaries</li>
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-green-500 mt-1"></i> Insightful dashboard</li>
+                            </ul>
+                            <Link href="/contact" className="btn btn-outline w-full justify-center mt-auto">Get Started</Link>
+                        </div>
+
+                        {/* Pro Plan */}
+                        <div className="bg-slate-900 text-white p-8 rounded-2xl shadow-xl relative border border-slate-900 flex flex-col h-full">
+                            <div className="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">POPULAR</div>
+                            <h3 className="text-2xl font-bold mb-2 text-white">Pro Plan</h3>
+                            <p className="text-slate-300 text-sm mb-6">Smart Item & Credit Management</p>
+                            <div className="mb-6 pb-6 border-b border-slate-700">
+                                <span className="text-sm font-semibold text-blue-400">Everything in Lite, plus:</span>
+                            </div>
+                            <ul className="space-y-3 mb-8 text-sm text-slate-300">
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-blue-400 mt-1"></i> Item management (Create & Edit)</li>
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-blue-400 mt-1"></i> On-the-fly item creation in sales</li>
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-blue-400 mt-1"></i> Fast item search from product list</li>
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-blue-400 mt-1"></i> Support for unlisted items</li>
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-blue-400 mt-1"></i> Full invoices with item details</li>
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-blue-400 mt-1"></i> Credit sales support</li>
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-blue-400 mt-1"></i> Item-wise sales summaries</li>
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-blue-400 mt-1"></i> Stock adjustment & Transfer</li>
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-blue-400 mt-1"></i> Stock Reports</li>
+                            </ul>
+                            <Link href="/contact" className="btn btn-primary w-full justify-center mt-auto">Choose Pro</Link>
+                        </div>
+
+                        {/* Elite Plan */}
+                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:border-blue-500 transition-colors flex flex-col h-full">
+                            <h3 className="text-2xl font-bold mb-2">Elite Plan</h3>
+                            <p className="text-slate-500 text-sm mb-6">Complete Business Suite</p>
+                            <div className="mb-6 pb-6 border-b border-slate-100">
+                                <span className="text-sm font-semibold text-blue-600">Everything in Pro, plus:</span>
+                            </div>
+                            <ul className="space-y-3 mb-8 text-sm text-slate-600">
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-green-500 mt-1"></i> Customer management</li>
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-green-500 mt-1"></i> Customer due & collection tracking</li>
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-green-500 mt-1"></i> Supplier management</li>
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-green-500 mt-1"></i> Separate purchase/sales summaries</li>
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-green-500 mt-1"></i> Customer names on invoices</li>
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-green-500 mt-1"></i> Unlimited bill saving & sharing</li>
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-green-500 mt-1"></i> Fast search across items & customers</li>
+                                <li className="flex gap-3"><i className="fa-solid fa-check text-green-500 mt-1"></i> One tap WhatsApp billing</li>
+                            </ul>
+                            <Link href="/contact" className="btn btn-outline w-full justify-center mt-auto">Go Elite</Link>
                         </div>
                     </div>
                 </div>

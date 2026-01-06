@@ -1,14 +1,24 @@
+'use client';
+
+import { useState } from "react";
 import Link from "next/link";
 import Card from "@/components/Card";
+import ApplicationModal from "@/components/ApplicationModal";
 
 export default function CareersPage() {
+    const [selectedJob, setSelectedJob] = useState<string | null>(null);
+
+    const openApplication = (jobTitle: string) => {
+        setSelectedJob(jobTitle);
+    };
+
     return (
         <>
             <section className="relative pt-[80px] min-h-[400px] bg-slate-900 flex items-center text-white">
                 <div className="absolute top-0 left-0 w-full h-full bg-slate-900/90 z-10"></div>
                 <div
-                    className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-0 opacity-20"
-                    style={{ backgroundImage: "url('/assets/hero_business_meeting_1767539244571.png')" }}
+                    className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-0 opacity-60"
+                    style={{ backgroundImage: "url('/assets/hero_careers.jpg')" }}
                 ></div>
 
                 <div className="container-custom relative z-20 text-center">
@@ -33,7 +43,8 @@ export default function CareersPage() {
                             </ul>
                         </div>
                         <div>
-                            <img src="/assets/hero_business_laptop_1767539174554.png" alt="Culture" className="rounded-xl shadow-lg" />
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img src="/assets/culture_innovation.png" alt="Culture of Innovation" className="rounded-xl shadow-lg" />
                         </div>
                     </div>
                 </div>
@@ -46,23 +57,23 @@ export default function CareersPage() {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <Card className="hover:border-blue-500 cursor-pointer">
-                            <h3 className="text-lg font-bold mb-1">Senior Frontend Engineer</h3>
+                        <Card className="hover:border-blue-500 cursor-pointer group" onClick={() => openApplication("Senior Frontend Engineer")}>
+                            <h3 className="text-lg font-bold mb-1 group-hover:text-blue-600 transition-colors">Senior Frontend Engineer</h3>
                             <p className="text-slate-500 text-sm mb-4">Remote | Full-time</p>
                             <button className="text-blue-600 font-semibold text-sm">Apply Now &rarr;</button>
                         </Card>
-                        <Card className="hover:border-blue-500 cursor-pointer">
-                            <h3 className="text-lg font-bold mb-1">Backend Developer (Node.js)</h3>
+                        <Card className="hover:border-blue-500 cursor-pointer group" onClick={() => openApplication("Backend Developer (Node.js)")}>
+                            <h3 className="text-lg font-bold mb-1 group-hover:text-blue-600 transition-colors">Backend Developer (Node.js)</h3>
                             <p className="text-slate-500 text-sm mb-4">Colombo | Full-time</p>
                             <button className="text-blue-600 font-semibold text-sm">Apply Now &rarr;</button>
                         </Card>
-                        <Card className="hover:border-blue-500 cursor-pointer">
-                            <h3 className="text-lg font-bold mb-1">UI/UX Designer</h3>
+                        <Card className="hover:border-blue-500 cursor-pointer group" onClick={() => openApplication("UI/UX Designer")}>
+                            <h3 className="text-lg font-bold mb-1 group-hover:text-blue-600 transition-colors">UI/UX Designer</h3>
                             <p className="text-slate-500 text-sm mb-4">Remote | Contract</p>
                             <button className="text-blue-600 font-semibold text-sm">Apply Now &rarr;</button>
                         </Card>
-                        <Card className="hover:border-blue-500 cursor-pointer">
-                            <h3 className="text-lg font-bold mb-1">QA Automation Engineer</h3>
+                        <Card className="hover:border-blue-500 cursor-pointer group" onClick={() => openApplication("QA Automation Engineer")}>
+                            <h3 className="text-lg font-bold mb-1 group-hover:text-blue-600 transition-colors">QA Automation Engineer</h3>
                             <p className="text-slate-500 text-sm mb-4">Colombo | Full-time</p>
                             <button className="text-blue-600 font-semibold text-sm">Apply Now &rarr;</button>
                         </Card>
@@ -99,6 +110,14 @@ export default function CareersPage() {
                     </div>
                 </div>
             </section>
+
+            {selectedJob && (
+                <ApplicationModal
+                    isOpen={!!selectedJob}
+                    onClose={() => setSelectedJob(null)}
+                    jobTitle={selectedJob}
+                />
+            )}
         </>
     );
 }

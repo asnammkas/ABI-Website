@@ -126,14 +126,83 @@ export default function BstEasyPosPage() {
                         <h2>See EasyPOS in Action</h2>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="aspect-[9/16] bg-slate-200 rounded-lg flex items-center justify-center text-slate-400">
-                            <span>App Screenshot 1</span>
+                        <div className="rounded-xl overflow-hidden shadow-lg border border-slate-200 relative aspect-[3/4] bg-slate-100">
+                            <img src="/assets/pos_mockup_1.png" alt="Select Item" className="absolute inset-0 w-full h-full object-cover" />
                         </div>
-                        <div className="aspect-[9/16] bg-slate-200 rounded-lg flex items-center justify-center text-slate-400">
-                            <span>App Screenshot 2</span>
+                        <div className="rounded-xl overflow-hidden shadow-lg border border-slate-200 relative aspect-[3/4] bg-slate-100">
+                            <img src="/assets/pos_mockup_2.png" alt="Billing Calculator" className="absolute inset-0 w-full h-full object-cover" />
                         </div>
-                        <div className="aspect-[9/16] bg-slate-200 rounded-lg flex items-center justify-center text-slate-400">
-                            <span>App Screenshot 3</span>
+                        <div className="rounded-xl overflow-hidden shadow-lg border border-slate-200 relative aspect-[3/4] bg-slate-100">
+                            <img src="/assets/pos_mockup_3.png" alt="Sales Report" className="absolute inset-0 w-full h-full object-cover" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Pricing Plans */}
+            <section className="section bg-white">
+                <div className="container-custom">
+                    <div className="text-center mb-12">
+                        <h2>Flexible Plans for Every Stage</h2>
+                        <p className="text-slate-500">From free trials to enterprise-grade solutions.</p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+                        {/* Trial Plan */}
+                        <div className="bg-slate-50 p-6 rounded-xl border border-slate-200 flex flex-col h-full">
+                            <h3 className="text-xl font-bold mb-2">Trial Plan</h3>
+                            <p className="text-slate-500 text-xs mb-4">Free for new users</p>
+                            <ul className="space-y-2 mb-6 text-sm text-slate-600">
+                                <li className="flex gap-2"><i className="fa-solid fa-check text-green-500 mt-1 text-xs"></i> All Elite features included</li>
+                                <li className="flex gap-2"><i className="fa-solid fa-clock text-orange-500 mt-1 text-xs"></i> Limited to 5 days</li>
+                            </ul>
+                            <Link href="/contact" className="btn btn-sm btn-outline w-full justify-center mt-auto">Start Trial</Link>
+                        </div>
+
+                        {/* Free Tier */}
+                        <div className="bg-slate-50 p-6 rounded-xl border border-slate-200 flex flex-col h-full">
+                            <h3 className="text-xl font-bold mb-2">Free Tier</h3>
+                            <p className="text-slate-500 text-xs mb-4">Forever free basics</p>
+                            <ul className="space-y-2 mb-6 text-sm text-slate-600">
+                                <li className="flex gap-2"><i className="fa-solid fa-check text-green-500 mt-1 text-xs"></i> All Pro features included</li>
+                                <li className="flex gap-2"><i className="fa-solid fa-hand text-orange-500 mt-1 text-xs"></i> Limited to 10 bills/day</li>
+                            </ul>
+                            <Link href="/contact" className="btn btn-sm btn-outline w-full justify-center mt-auto">Get Free</Link>
+                        </div>
+
+                        {/* Pro Plan */}
+                        <div className="bg-white p-6 rounded-xl border-2 border-blue-100 shadow-lg relative flex flex-col h-full">
+                            <div className="absolute top-0 right-0 bg-blue-100 text-blue-600 text-[10px] font-bold px-2 py-1 rounded-bl-lg rounded-tr-lg">RECOMMENDED</div>
+                            <h3 className="text-xl font-bold mb-2 text-blue-900">Pro Plan</h3>
+                            <p className="text-slate-500 text-xs mb-4">Smart Management</p>
+                            <ul className="space-y-2 mb-6 text-sm text-slate-600">
+                                <li className="flex gap-2"><i className="fa-solid fa-check text-blue-500 mt-1 text-xs"></i> Advanced calculator & sales calc</li>
+                                <li className="flex gap-2"><i className="fa-solid fa-check text-blue-500 mt-1 text-xs"></i> Item management & Fast search</li>
+                                <li className="flex gap-2"><i className="fa-solid fa-check text-blue-500 mt-1 text-xs"></i> Unlisted/One-time items support</li>
+                                <li className="flex gap-2"><i className="fa-solid fa-check text-blue-500 mt-1 text-xs"></i> Full invoices & Credit sales</li>
+                                <li className="flex gap-2"><i className="fa-solid fa-check text-blue-500 mt-1 text-xs"></i> Batch sales FIFO/LIFO</li>
+                                <li className="flex gap-2"><i className="fa-solid fa-check text-blue-500 mt-1 text-xs"></i> Stock adjustment & reports</li>
+                                <li className="flex gap-2"><i className="fa-solid fa-check text-blue-500 mt-1 text-xs"></i> Daily/Monthly/Yearly summaries</li>
+                                <li className="flex gap-2"><i className="fa-solid fa-check text-blue-500 mt-1 text-xs"></i> WhatsApp/SMS sharing</li>
+                            </ul>
+                            <Link href="/contact" className="btn btn-sm btn-primary w-full justify-center mt-auto">Choose Pro</Link>
+                        </div>
+
+                        {/* Elite Plan */}
+                        <div className="bg-slate-900 text-white p-6 rounded-xl border border-slate-900 shadow-lg flex flex-col h-full">
+                            <h3 className="text-xl font-bold mb-2 text-white">Elite Plan</h3>
+                            <p className="text-slate-400 text-xs mb-4">Complete Suite</p>
+                            <div className="mb-4 pb-4 border-b border-slate-700">
+                                <span className="text-xs font-semibold text-blue-400">Everything in Pro, plus:</span>
+                            </div>
+                            <ul className="space-y-2 mb-6 text-sm text-slate-300">
+                                <li className="flex gap-2"><i className="fa-solid fa-check text-green-400 mt-1 text-xs"></i> Customer management & Dues</li>
+                                <li className="flex gap-2"><i className="fa-solid fa-check text-green-400 mt-1 text-xs"></i> Supplier management</li>
+                                <li className="flex gap-2"><i className="fa-solid fa-check text-green-400 mt-1 text-xs"></i> Separate purchase/sales summaries</li>
+                                <li className="flex gap-2"><i className="fa-solid fa-check text-green-400 mt-1 text-xs"></i> Customer names on invoices</li>
+                                <li className="flex gap-2"><i className="fa-solid fa-check text-green-400 mt-1 text-xs"></i> Unlimited bill saving & sharing</li>
+                                <li className="flex gap-2"><i className="fa-solid fa-check text-green-400 mt-1 text-xs"></i> One tap WhatsApp billing</li>
+                            </ul>
+                            <Link href="/contact" className="btn btn-sm btn-white w-full justify-center mt-auto">Go Elite</Link>
                         </div>
                     </div>
                 </div>
