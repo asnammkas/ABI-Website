@@ -38,33 +38,33 @@ export default function Home() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {/* billCalc */}
-                        <Card className="text-center">
-                            <div className="h-[120px] bg-slate-100 rounded-lg mb-6 flex items-center justify-center p-4">
+                        <Card className="text-center group hover:-translate-y-1 transition-transform duration-300">
+                            <div className="h-[120px] bg-indigo-50 border border-indigo-100 rounded-lg mb-6 flex items-center justify-center p-4">
                                 <img src="/assets/billcalc_logo.png" alt="billCalc Logo" className="h-full w-auto object-contain" />
                             </div>
-                            <h3 className="text-xl font-bold mb-4">billCalc</h3>
+                            <h3 className="text-xl font-bold mb-4 group-hover:text-indigo-600 transition-colors">billCalc</h3>
                             <p className="text-slate-600 mb-6 text-sm">The smart way to handle billing with total discounts, bluetooth printing and instant calculations.</p>
-                            <Link href="/products/billcalc" className="text-blue-600 font-semibold hover:underline">Learn More &rarr;</Link>
+                            <Link href="/products/billcalc" className="text-indigo-600 font-semibold hover:underline">Learn More &rarr;</Link>
                         </Card>
 
                         {/* bstEasyPos */}
-                        <Card className="text-center">
-                            <div className="h-[120px] bg-slate-100 rounded-lg mb-6 flex items-center justify-center p-4">
+                        <Card className="text-center group hover:-translate-y-1 transition-transform duration-300">
+                            <div className="h-[120px] bg-blue-50 border border-blue-100 rounded-lg mb-6 flex items-center justify-center p-4">
                                 <img src="/assets/pos_logo.png" alt="bstEasyPos Logo" className="h-full w-auto object-contain" />
                             </div>
-                            <h3 className="text-xl font-bold mb-4">bstEasyPos</h3>
+                            <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors">bstEasyPos</h3>
                             <p className="text-slate-600 mb-6 text-sm">Complete POS, CRM and stock management for modern retailers to drive sales.</p>
                             <Link href="/products/bsteasypos" className="text-blue-600 font-semibold hover:underline">Learn More &rarr;</Link>
                         </Card>
 
                         {/* BST Barcode */}
-                        <Card className="text-center">
-                            <div className="h-[120px] bg-slate-100 rounded-lg mb-6 flex items-center justify-center p-4">
+                        <Card className="text-center group hover:-translate-y-1 transition-transform duration-300">
+                            <div className="h-[120px] bg-rose-50 border border-rose-100 rounded-lg mb-6 flex items-center justify-center p-4">
                                 <img src="/assets/barcode_logo.png" alt="BST Barcode Logo" className="h-full w-auto object-contain" />
                             </div>
-                            <h3 className="text-xl font-bold mb-4">BST Barcode Label</h3>
+                            <h3 className="text-xl font-bold mb-4 group-hover:text-rose-600 transition-colors">BST Barcode Label</h3>
                             <p className="text-slate-600 mb-6 text-sm">Print professional barcode labels directly from your phone to any bluetooth printer.</p>
-                            <Link href="/products/bstbarcode" className="text-blue-600 font-semibold hover:underline">Learn More &rarr;</Link>
+                            <Link href="/products/bstbarcode" className="text-rose-600 font-semibold hover:underline">Learn More &rarr;</Link>
                         </Card>
                     </div>
                 </div>
