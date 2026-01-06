@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+:root {
+    /* Wireframe Theme Variables */
+    --primary-color: #2563eb;
+    /* Royal Blue for Buttons/Links */
+    --primary-hover: #1d4ed8;
+    --secondary-color: #64748b;
+    /* Slate Gray for secondary text */
+
+    --text-main: #0f172a;
+    /* Dark Slate for Headings */
+    --text-body: #334155;
+    /* Slate 700 for Body */
+    --text-light: #ffffff;
+    /* White text for Hero */
+
+    --bg-body: #ffffff;
+    --bg-light: #f8fafc;
+    /* Very light gray for alternating sections */
+    --bg-footer: #e2e8f0;
+    /* Light Gray for Footer (Wireframe match) */
+    --bg-hero: #0f172a;
+    /* Dark Navy for Hero Backgrounds */
+
+    --border-color: #e2e8f0;
+
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.06);
+
+    --font-main: 'Inter', sans-serif;
+    --container-width: 1280px;
+    --nav-height: 80px;
+}
+
+@layer base {
+    body {
+        @apply bg-white text-slate-700 antialiased;
+        font-family: var(--font-main);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        @apply font-bold text-slate-900 mb-4;
+        line-height: 1.2;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 2.25rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@layer components {
+    .container-custom {
+        max-width: var(--container-width);
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .btn {
+        @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold text-sm transition-all;
+    }
+
+    .btn-primary {
+        @apply bg-blue-600 text-white hover:bg-blue-700 shadow-sm;
+    }
+
+    .btn-outline {
+        @apply bg-transparent border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white;
+    }
+
+    .btn-white {
+        @apply bg-white text-blue-600 hover:bg-slate-100;
+    }
+
+    .section {
+        @apply py-20;
+    }
+
+    .card {
+        @apply bg-white p-8 rounded-lg shadow-sm border border-slate-200 transition-all hover:-translate-y-1 hover:shadow-lg;
+    }
+
+    .card-icon {
+        @apply w-12 h-12 bg-blue-50 text-blue-600 flex items-center justify-center rounded-lg text-2xl mb-6;
+    }
+}
