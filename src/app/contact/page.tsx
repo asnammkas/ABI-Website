@@ -1,3 +1,6 @@
+import FadeIn from "@/components/animations/FadeIn";
+import StaggerContainer, { StaggerItem } from "@/components/animations/StaggerContainer";
+
 export default function ContactPage() {
     return (
         <>
@@ -7,17 +10,21 @@ export default function ContactPage() {
                     className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-0 opacity-80"
                     style={{ backgroundImage: "url('/assets/hero_contact_v2.png')" }}
                 ></div>
-                <div className="container-custom relative z-20 text-center">
-                    <h1 className="text-5xl md:text-6xl font-extrabold mb-4 text-white">Contact Us</h1>
-                    <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">Get in touch with our team for demos, support, or inquiries.</p>
-                </div>
+                <StaggerContainer className="container-custom relative z-20 text-center">
+                    <StaggerItem>
+                        <h1 className="text-5xl md:text-6xl font-extrabold mb-4 text-white">Contact Us</h1>
+                    </StaggerItem>
+                    <StaggerItem>
+                        <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">Get in touch with our team for demos, support, or inquiries.</p>
+                    </StaggerItem>
+                </StaggerContainer>
             </section>
 
             <section className="section bg-white">
                 <div className="container-custom">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                         {/* Contact Form */}
-                        <div className="bg-white p-8 rounded-lg border border-slate-200 shadow-sm">
+                        <FadeIn direction="right" className="bg-white p-8 rounded-lg border border-slate-200 shadow-sm">
                             <h3 className="text-2xl font-bold mb-6">Send us a Message</h3>
                             <form className="space-y-6">
                                 <div>
@@ -43,10 +50,10 @@ export default function ContactPage() {
                                 </div>
                                 <button type="button" className="btn btn-primary w-full">Send Message</button>
                             </form>
-                        </div>
+                        </FadeIn>
 
                         {/* Map & Info */}
-                        <div className="flex flex-col gap-8">
+                        <FadeIn direction="left" delay={0.2} className="flex flex-col gap-8">
                             <div className="bg-slate-50 p-8 rounded-lg border border-slate-200">
                                 <h3 className="text-xl font-bold mb-6">Contact Information</h3>
                                 <div className="space-y-4">
@@ -86,7 +93,7 @@ export default function ContactPage() {
                                     referrerPolicy="no-referrer-when-downgrade"
                                 ></iframe>
                             </div>
-                        </div>
+                        </FadeIn>
                     </div>
                 </div>
             </section>

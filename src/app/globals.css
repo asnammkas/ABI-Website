@@ -69,7 +69,7 @@
     }
 
     .btn {
-        @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold text-sm transition-all;
+        @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold text-sm transition-all duration-200 active:scale-95 ease-out;
     }
 
     .btn-primary {
